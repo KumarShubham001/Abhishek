@@ -1,0 +1,156 @@
+
+<html>
+<head>
+	<style>
+		#main{
+			margin:100px auto;
+			width: 700px;
+			height: 300px;
+			}
+		.container{
+			width:30px;
+			height:30px;
+			border-radius: 50%;
+			letter-spacing: 1px;
+			float: left;
+			margin:100px 30px 30px 100px; 
+		}
+		.container1{
+             background:pink;
+		}
+		.container2{
+             background:lightblue;
+		}
+		.container3{
+             background:lightgreen;
+		}
+		.container4{
+             background:yellow;
+		}
+		.container:hover{
+            animation: an 0.5s forwards;
+            cursor: pointer;
+		}
+		.dot{
+			width: 5px;
+			height: 5px;
+	        background:black;
+	        border-radius: 50%;
+	        display:block;	
+	        float: left;
+	        margin-top: 8px;
+	        margin-right: 10px;
+		}
+		.rotater1,.rotater2,.rotater3,.rotater4{
+			margin-left: 45px;
+			width: 100px;
+			padding-left: 93px;
+			position: relative;
+			top:9px;
+			left: -125px;
+			float: left;
+			opacity: 0;
+		}
+		.container:hover .rotater1{
+			opacity: 1;
+			animation:anim1 2s forwards;
+		}
+		.container:hover .rotater2{
+			opacity: 1;
+			animation:anim2 2s forwards;
+		}
+		.container:hover .rotater3{
+			opacity: 1;
+			animation:anim3 2s forwards;
+		}
+		.container:hover .rotater4{
+			opacity: 1;
+			animation:anim4 2s forwards;
+		}
+		.ro {
+            transform: scale(-1);
+            text-align: right;
+            margin-left:10px;
+            margin-top: 3px;
+        }
+        .text{
+        	opacity: 0;
+        	text-align: center;
+        	width: 500px;
+        	font-size: 40px;
+        	margin:0px auto;
+        	position: absolute;
+        	top: 50px;
+        }
+         #main:hover .text{
+        	opacity: 1;
+        }
+        @keyframes an{
+        	0%{
+        	    opacity: 0;
+        	}
+        	100%{
+        		margin-top: 66px;
+        		padding:30px;
+        		margin-right: 0px;
+        		margin-left: 70px;
+        	}
+        }
+        @keyframes anim1{
+           0%{
+               opacity: 0;
+           }
+           100%{
+           	  opacity: 1;
+              transform: rotate(220deg);
+           }
+        }
+        @keyframes anim2{
+           0%{
+               opacity: 0;
+           }
+           100%{
+           	  opacity: 1;
+              transform: rotate(190deg);
+           }
+        }
+        @keyframes anim3{
+           0%{
+               opacity: 0;
+           }
+           100%{
+           	  opacity: 1;
+              transform: rotate(240deg);
+           }
+        }
+        @keyframes anim4{
+           0%{
+               opacity: 0;
+           }
+           100%{
+           	  opacity: 1;
+              transform: rotate(60deg);
+           }
+        }
+	</style>
+</head>
+<body>
+<div id="main">
+	<div class="container container1">
+		<div class= "text">
+			Es ist acht Uhr und einundvierzig Minuten
+		</div>
+   		<div class="rotater1"><div class="dot"></div><div class="ro">Paris</div></div>	
+	</div>
+	<div class="container container2">
+   		<div class="rotater2"><div class="dot"></div><div class="ro">Mumbai</div></div>		
+	</div>
+	<div class="container container3">
+   		<div class="rotater3"><div class="dot"></div><div class="ro">America</div></div>	
+	</div>
+	<div class="container container4">
+   		<div class="rotater4"><div class="dot"></div><span>London</span></div>	
+	</div>
+</div>	
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website_demofooter&amp;utm_content=footer_img"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"  alt="www.000webhost.com"></a></div></body>
+</html>
