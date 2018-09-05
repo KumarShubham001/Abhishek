@@ -10,10 +10,12 @@
 		.container{
 			width:30px;
 			height:30px;
-			border-radius: 50%;
+			border-radius:50%;
 			letter-spacing: 1px;
 			float: left;
-			margin:100px 30px 30px 100px; 
+			margin-top: 100px;
+			margin-left: 70px;
+			margin-right: 70px; 
 		}
 		.container1{
              background:pink;
@@ -74,16 +76,19 @@
             margin-top: 3px;
         }
         .text{
+        	
         	opacity: 0;
         	text-align: center;
         	width: 500px;
-        	font-size: 40px;
+        	font-size: 50px;
+        	padding-right:350px;
         	margin:0px auto;
         	position: absolute;
-        	top: 50px;
+        	top: 30px;
+        	left: 450px;
         }
-         #main:hover .text{
-        	opacity: 1;
+         .container:hover .text{
+        	animation: anim-text 1s forwards ease-out; 
         }
         @keyframes an{
         	0%{
@@ -92,8 +97,8 @@
         	100%{
         		margin-top: 66px;
         		padding:30px;
-        		margin-right: 0px;
-        		margin-left: 70px;
+        		margin-right: 40px;
+        		margin-left: 40px;
         	}
         }
         @keyframes anim1{
@@ -132,25 +137,44 @@
               transform: rotate(60deg);
            }
         }
+        @keyframes anim-text{
+           0%{
+               opacity: 0;
+               transform: rotateY(-30deg) rotateX(20deg);
+           }
+           100%{
+           	  opacity: 1;
+           	  transform: rotateY(0deg) rotateX(0deg);     
+           }
+        }
 	</style>
 </head>
 <body>
-<div id="main">
-	<div class="container container1">
-		<div class= "text">
-			Es ist acht Uhr und einundvierzig Minuten
+	<div id="main">
+		<div class="container container1">
+			<div class= "text">
+				Il est neuf heures et quarante minutes
+			</div>
+	   		<div class="rotater1"><div class="dot"></div><div class="ro">Paris</div></div>	
 		</div>
-   		<div class="rotater1"><div class="dot"></div><div class="ro">Paris</div></div>	
-	</div>
-	<div class="container container2">
-   		<div class="rotater2"><div class="dot"></div><div class="ro">Mumbai</div></div>		
-	</div>
-	<div class="container container3">
-   		<div class="rotater3"><div class="dot"></div><div class="ro">America</div></div>	
-	</div>
-	<div class="container container4">
-   		<div class="rotater4"><div class="dot"></div><span>London</span></div>	
-	</div>
-</div>	
+		<div class="container container2">
+			<div class= "text">
+				Es ist acht Uhr und einundvierzig Minuten
+			</div>
+	   		<div class="rotater2"><div class="dot"></div><div class="ro">Mumbai</div></div>		
+		</div>
+		<div class="container container3">
+			<div class= "text">
+				It's three forty-one
+			</div>
+	   		<div class="rotater3"><div class="dot"></div><div class="ro">America</div></div>	
+		</div>
+		<div class="container container4">
+			<div class= "text"> 
+				It's nineteen minutes to nine
+			</div>
+	   		<div class="rotater4"><div class="dot"></div><span>London</span></div>	
+		</div>
+	</div>	
 <div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website_demofooter&amp;utm_content=footer_img"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"  alt="www.000webhost.com"></a></div></body>
 </html>
